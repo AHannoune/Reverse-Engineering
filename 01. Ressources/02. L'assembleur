@@ -1,0 +1,214 @@
+# L'assembleur
+
+## Sommaire
+* [Introduction](https://github.com/MalweenLeGoffic/Reverse-Engineering/wiki/Ressources_LAssembleur#introduction)
+* [Instruction assembleur](https://github.com/MalweenLeGoffic/Reverse-Engineering/wiki/Ressources_LAssembleur#instruction-assembleur)
+* [Syntaxe AT&T ou Intel](https://github.com/MalweenLeGoffic/Reverse-Engineering/wiki/Ressources_LAssembleur#syntaxe-att-ou-intel)
+* [Les opérations](https://github.com/MalweenLeGoffic/Reverse-Engineering/wiki/Ressources_LAssembleur#les-op%C3%A9rations)
+* [Sources](https://github.com/MalweenLeGoffic/Reverse-Engineering/wiki/Ressources_LAssembleur#sources)
+
+## Introduction
+L'assembleur est le langage lisible par un humain représentant le langage machine (binaire). Connaître et comprendre l'assembleur permet une compréhension plus générale du fonctionnement des composants comme le processeur et ses registres ou encore la mémoire ainsi que des rouages internes liés aux langages de développement. De plus, il s'agit d'un prérequis indispensable à la résolution des challenges de type _cracking_ et _reverse engineering_.
+
+## Instruction assembleur
+
+Une instruction en langage assembleur s'écrit sous la forme suivante :
+```asm
+opération opérande1, opérande2
+```
+
+Si l'opération produit un résultat, une addition par exemple, alors il sera stocké dans un des deux opérandes. Un de ces deux opérandes sera appelé source et le second, destination.
+
+A noter qu'il existe également des opérations qui nécessitent un seul un opérande :
+```asm
+opération opérande1
+```
+
+## Syntaxe AT&T ou Intel
+Il existe deux syntaxes principales permettant d'écrire du langage assembleur : la syntaxe **AT&T** et la syntaxe **Intel**.
+
+La première différence est l'ordre des opérandes. Comme indiqué précédemment, il y a un opérande source et un opérande destination. Ce qui donne en syntaxe **AT&T** :
+```asm
+opération source destination
+```
+
+Et en syntaxe **Intel** :
+```asm
+opération destination source
+```
+
+La syntaxe lors de l'utilisation d'un registre change également, ici l'utilisation du registre _eax_ en syntaxe **AT&T** :
+```asm
+opération %esp, %ebp
+```
+
+Et syntaxe **Intel** :
+```asm
+opération ebp, esp
+```
+
+
+En **AT&T**, les constantes sont précédées du signe _$_ :
+```asm
+opération $0x0, %eax
+```
+
+En syntaxe **Intel** :
+```asm
+opération eax, 0x0
+```
+
+
+Au niveau des opérations utilisant des emplacements mémoire, **AT&T** utilise les parenthèses tandis que la syntaxe **Intel** utilise les crochets :
+```asm
+opérationl (%ebx), %eax
+```
+
+```asm
+opération eax, [ebx]
+```
+
+
+Une dernière différence est l'indication de la taille de l'opérande :
+
+|    Taille de l'opérande    |       AT&T      |      Intel     |
+| :------------------------: | :-------------: | :------------: |
+|       Bytes (8 bits)       |   opérationb    |    byte ptr    |
+|       Word (16 bits)       |   opérationw    |    word ptr    |
+|       Long (32 bits)       |   opérationl    |    dword ptr   |
+
+Soit en **AT&T** :
+```asm
+opérationb $0x1, 0x804a028
+opérationw $0x32, 0x8(%eax)
+opérationl (%ebx), %eax
+```
+
+En syntaxe **Intel** :
+```asm
+opération BYTE PTR ds:0x804a028, 0x1
+opération WORD PTR [eax+0x8], 0x32
+opération eax, DWORD PTR [ebx]
+```
+**Note** : Sur les architectures 64 bits il est possible de retrouver la lettre _q_ (**AT&T**) ou _QWORD PTR_ (**Intel**) pour les opérations sur 64 bits.
+
+## Les opérations
+Il existe un certain nombre d'opérations possibles et cela dépend de l'architecture du système mais voici les principales instructions rencontrées sur les challenges de niveau facile. Toutes les instructions seront indiquées en respectant la syntaxe **Intel**.
+
+Soustraction de _source_ au registre _dest_, le résultat sera stocké dans _dest_ (les autres instructions de ce type suivent le même principe) :
+```asm
+sub dest, source
+```
+
+Addition :
+```asm
+add dest, sources
+```
+
+Opération ET ( & ) bit à bit :
+```asm
+and dest, source
+```
+
+Opération OU ( \| ) bit à bit :
+```asm
+or dest, source
+```
+
+Opération OU EXCLUSIF ( ^ ) bit à bit :
+```asm
+xor dest, source
+```
+
+Opération NEGATION ( ~ ) bit à bit :
+```asm
+not opérande
+```
+
+Instruction permettant de copier un opérande source (registre _esp_) dans un opérande destination (registre _ebp_) :
+```asm
+mov dest, source
+```
+
+Instruction permettant de charger un offset d'une adresse mémoire au sein du registre _eax_ (LEA pour Load Effective Address) :
+```asm
+lea dest, [source-0x10c]
+```
+
+Instruction permettant d'empiler une valeur sur la pile :
+```asm
+push opérande
+```
+
+Instruction permettant de dépiler une valeur de la pile :
+```asm
+pop opérande
+```
+
+Instruction permettant de comparer deux opérandes :
+```asm
+cmp opérande1, opérande2
+```
+
+Instruction (Jump Equal) indiquant un saut à l'adresse _@address_ si les deux valeurs testées sont égales :
+```asm
+je @address
+```
+
+Instruction (Jump Not Equal) indiquant un saut à l'adresse _@address_ si les deux valeurs testées ne sont pas égales :
+```asm
+jne @address
+```
+
+Un ensemble d'instructions permet de tester si un opérande est strictement inférieur (JL pour Jump if Less), strictement supérieur (JG pour Jump if Greater), inférieur ou égal (JLE pour Jump if Less or Equal), supérieur ou égal (JGE pour Jump if Greater or Equal).
+```asm
+jl @address
+```
+
+```asm
+jg @address
+```
+
+```asm
+jle @address
+```
+
+```asm
+jge @address
+```
+A noter que l'on retrouve leurs correspondances en négation : JNL (Jump if Not Less), JNG (Jump if Not Greater), JNLE (Jump if Not Less or Equal) ainsi que JNGE (Jump if Not Greater or Equal).
+
+
+On retrouve également l'égalité par rapport à la valeur 0 (JZ pour Jump if Zero, JNZ pour Jump if Not Zero) :
+```asm
+jz @address
+```
+
+```asm
+jnz @address
+```
+
+Instruction de saut inconditionnel :
+```asm
+jmp @address
+```
+
+Appel à une fonction (ici à la fonction C printf()):
+```asm
+call sym.imp.printf
+```
+
+Instruction permettant de libérer certaines ressources (libère l'espace _stack_frame_ alloué par l'appel à une fonction) :
+```asm
+leave
+```
+
+Instruction permettant de quitter une fonction :
+```asm
+ret
+```
+
+Il y a encore bien d'autres instructions mais celles-ci vont déjà permettre de comprendre les premiers challenges de type Cracking ou Reverse Engineering.
+
+## Sources
+https://www.gladir.com/LEXIQUE/ASM/DICTIONN.HTM
