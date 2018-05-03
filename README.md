@@ -3,8 +3,8 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
 
 # Catégories
 * [Ressources](https://github.com/Sharpforce/Reverse-Engineering/tree/master/01.%20Ressources)
-  * [01. Architecture Processeur](https://github.com/MalweenLeGoffic/Reverse-Engineering/blob/master/01.%20Ressources/01.%20Architecture%20Processeur.md)
-  * [02. L'assembleur](https://github.com/MalweenLeGoffic/Reverse-Engineering/blob/master/01.%20Ressources/02.%20L'assembleur.md)
+  * [01. Architecture Processeur](https://github.com/Sharpforce/Reverse-Engineering/blob/master/01.%20Ressources/01.%20Architecture%20Processeur.md)
+  * [02. L'assembleur](https://github.com/Sharpforce/Reverse-Engineering/blob/master/01.%20Ressources/02.%20L'assembleur.md)
   
 # Sources
 * [Wikipédia - Reverse Engineering](https://fr.wikipedia.org/wiki/R%C3%A9tro-ing%C3%A9nierie)
