@@ -1,4 +1,5 @@
-# Reverse-Engineering
+![Reverse Engineering](https://github.com/Sharpforce/Reverse-Engineering/blob/master/.images/titre_reverse_engineering.png)
+
 La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui consiste à étudier un objet pour en déterminer le fonctionnement interne ou la méthode de fabrication. On parle également de rétroconception et dans le domaine du vivant de biomimétisme. Le terme équivalent en anglais est reverse engineering.
 
 # Catégories
