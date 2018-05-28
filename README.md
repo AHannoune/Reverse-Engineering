@@ -12,3 +12,6 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
   * [06. C & ASM (32 bits) - Les opérateurs logiques](https://github.com/Sharpforce/Reverse-Engineering/blob/master/01.%20Ressources/06.%20C%20%26%20ASM%20(32%20bits)%20-%20Les%20op%C3%A9rateurs%20logiques.md)
   * [07. C & ASM (32 bits) - Les conditions](https://github.com/Sharpforce/Reverse-Engineering/blob/master/01.%20Ressources/07.%20C%20%26%20ASM%20(32%20bits)%20-%20Les%20conditions.md)
   * [08. C & ASM (32 bits) - Les boucles](https://github.com/Sharpforce/Reverse-Engineering/blob/master/01.%20Ressources/08.%20C%20%26%20ASM%20(32%20bits)%20-%20Les%20boucles.md)
+
+* [Challenges](https://github.com/Sharpforce/Reverse-Engineering/tree/master/04.%20Challenges)
+  * [Un peu de pratique - Challenge n°01](https://github.com/Sharpforce/Reverse-Engineering/tree/master/04.%20Challenges/Un%20peu%20de%20pratique%20-%20Challenge%20n%C2%B001)
