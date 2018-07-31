@@ -7,14 +7,14 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
 ## Architecture x86 (32 bits) & x86_64 (64 bits)
 - Généralités
   - [Architecture Processeur](ressources/architecture-x86-x86_64/01.Architecture-Processeur.md)
-  - L'assembleur
+  - [L'assembleur](ressources/architecture-x86-x86_64/02.L-assembleur.md)
 - Langage C
-  - Introduction
-  - Les variables
-  - Les opérations mathématiques
-  - Les opérateurs logiques
-  - Les conditions
-  - Les boucles
+  - [Introduction](ressources/architecture-x86-x86_64/03.Introduction.md)
+  - [Les variables](ressources/architecture-x86-x86_64/04.Les-variables.md)
+  - [Les opérations mathématiques](ressources/architecture-x86-x86_64/05.Les-opérations-mathématiques.md)
+  - [Les opérateurs logiques](ressources/architecture-x86-x86_64/06.Les-opérateurs-logiques.md)
+  - [Les conditions](ressources/architecture-x86-x86_64/07.Les-conditions.md)
+  - [Les boucles](ressources/architecture-x86-x86_64/08.Les-boucles.md)
 
 # Challenges
 - Architecture x86 (32 bits) et langage C
