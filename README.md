@@ -6,7 +6,7 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
 
 ## Architecture x86 (32 bits) & x86_64 (64 bits)
 - Généralités
-  - Architecture Processeur
+  - [Architecture Processeur](ressources/architecture-x86-x86_64/01.Architecture-Processeur.md)
   - L'assembleur
 - Langage C
   - Introduction
