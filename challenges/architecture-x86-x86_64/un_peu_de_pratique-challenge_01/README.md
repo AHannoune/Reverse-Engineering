@@ -1,7 +1,7 @@
 # Un peu de pratique - Challenge n°01
 
 Astuce :
-> Pas aussi facile que de trouver un string.
+> Ne cherchez pas trop loin.
 
 
 Lien :
