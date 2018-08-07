@@ -1,5 +1,8 @@
 # Un peu de pratique - Challenge n°01
 
-```
-Retrouver le mot de passe de ce binaire !
-```
+Astuce :
+> Pas aussi facile que de trouver un string.
+
+
+Lien :
+[Télécharger](challenge01)
