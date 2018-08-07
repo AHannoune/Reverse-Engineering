@@ -1,5 +1,3 @@
-![Reverse Engineering](images/banniere.png)
-
 La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui consiste à étudier un objet pour en déterminer le fonctionnement interne ou la méthode de fabrication. On parle également de rétroconception et dans le domaine du vivant de biomimétisme. Le terme équivalent en anglais est reverse engineering (Wikipédia).
 
 # Ressources
@@ -17,8 +15,6 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
   - [Les boucles](ressources/architecture-x86-x86_64/08.Les-boucles.md)
 
 # Challenges
-- Architecture x86 (32 bits) et langage C
-  - Un peu de pratique - Challenge n°01
 
 # Write-ups
 
