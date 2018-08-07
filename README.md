@@ -15,7 +15,6 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
   - [Les opérateurs logiques](ressources/architecture-x86-x86_64/06.Les-opérateurs-logiques.md)
   - [Les conditions](ressources/architecture-x86-x86_64/07.Les-conditions.md)
   - [Les boucles](ressources/architecture-x86-x86_64/08.Les-boucles.md)
-    - test
 
 # Challenges
 - Architecture x86 (32 bits) et langage C
