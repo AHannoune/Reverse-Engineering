@@ -9,8 +9,8 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
 - Langage C
   - [Introduction](ressources/architecture-x86-x86_64/03.Introduction.md)
   - [Les variables](ressources/architecture-x86-x86_64/04.Les-variables.md)
-  - [Les opérations mathématiques](ressources/architecture-x86-x86_64/05.Les-opérations-mathématiques.md)
-  - [Les opérateurs logiques](ressources/architecture-x86-x86_64/06.Les-opérateurs-logiques.md)
+  - [Les opérations mathématiques](ressources/architecture-x86-x86_64/05.Les-operations-mathematiques.md)
+  - [Les opérateurs logiques](ressources/architecture-x86-x86_64/06.Les-operateurs-logiques.md)
   - [Les conditions](ressources/architecture-x86-x86_64/07.Les-conditions.md)
   - [Les boucles](ressources/architecture-x86-x86_64/08.Les-boucles.md)
 
