@@ -3,10 +3,10 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
 # Ressources
 
 ## Architecture x86 (32 bits) & x86_64 (64 bits)
-- Généralités
+- Architecture x86
   - [Architecture Processeur](ressources/architecture-x86-x86_64/01.Architecture-Processeur.md)
   - [L'assembleur](ressources/architecture-x86-x86_64/02.L-assembleur.md)
-- Langage C
+- Du C à l'assembleur
   - [Introduction](ressources/architecture-x86-x86_64/03.Introduction.md)
   - [Les variables](ressources/architecture-x86-x86_64/04.Les-variables.md)
   - [Les opérations mathématiques](ressources/architecture-x86-x86_64/05.Les-operations-mathematiques.md)
@@ -15,6 +15,7 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
   - [Les boucles](ressources/architecture-x86-x86_64/08.Les-boucles.md)
   - [Les fonctions](ressources/architecture-x86-x86_64/09.Les-fonctions.md)
   - [Les structures](ressources/architecture-x86-x86_64/10.Les-structures.md)
+- Architecture x64
   - [Architecture x64](ressources/architecture-x86-x86_64/11.Architecture-x64.md)
 
 # Challenges
@@ -23,6 +24,8 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
 - Facile
   - [Un peu de pratique - Challenge 01](challenges/architecture-x86-x86_64/un_peu_de_pratique-challenge_01/README.md)
   - [Un peu de pratique - Challenge 02](challenges/architecture-x86-x86_64/un_peu_de_pratique-challenge_02/README.md)
+- Moyen
+  - [Un peu de pratique - Challenge 03](challenges/architecture-x86-x86_64/un_peu_de_pratique-challenge_03/README.md)
 
 # Write-ups
 
