@@ -159,7 +159,7 @@ $ objdump -d challenge01 -M intel
 42: 80484ed:       c3                      ret
 ```
 
-Afin de simplifier la correction, seules les lignes significatives seront analysées. 
+Afin de simplifier la correction, seules les lignes significatives seront analysées. Pour les néophytes, il est recommandé de revenir sur cette correction après avoir terminé la lecture des autres articles dédiés au reverse engineering.
 
 La ligne 9 et 10 permettent la vérification du bon nombre d'argument sur la ligne de commande lors du lancement du programme. Le registre _EAX_ est comparé à la valeur 2, c'est-à-dire que le programme attend 2 arguments. Le premier argument est le nom du programme, soit "./challenge01" (plus exactement, la chaîne contient également le chemin absolu du programme) et le second argument est le mot de passe renseigné (pour plus de détails voir  [Les arguments de la ligne de commande pour les programmes C](https://www.areaprog.com/c/article-229-argc-et-argv-utilisation-des-parametres-de-la-ligne-de-commande). Si le nombre d'arguments n'est pas égal à 2, alors une chaîne de caractère, stockée à l'adresse _0x08048570_, ligne 12, est affichée grâce à la fonction _puts()_, ligne 13. Le problème est donc maintenant de connaître la chaîne stockée à l'adresse _0x08048570_. L'utilitaire _objdump_ peut faire cela :
 ```
@@ -180,9 +180,9 @@ Contenu de la section .rodata :
  80485b8 2e2e2e00                             ....
 ```
 
-L'adresse indiquée à la première ligne se rapproche beaucoup de celle qui nous intéresse mais ce n'est pas encore cela. Il faut donc pousser un peu plus loin le raisonnement et comprendre que l'adresse _0x08048568_ contient la valeur héxa 03, l'adresse _0x08048569_ contient "00",  _0x0804856a_ contient également "00", pour enfin arriver à l'adresse _0x08048570_ qui contient _55_, soit le caractère "U". Mais il faut bien se souvenir que dans un programme, la fin d'une chaîne est représenté par le caractère fin de chaîne ayant pour valeur "\0" (0x00). Le prochain caractère de ce type est disponible à l'adresse _0x0804858e_. La chaîne qui sera donc affichée grâce à la méthode _puts()_ est en définitif : "Usage : ./challenge01 password".
+L'adresse indiquée à la première ligne se rapproche beaucoup de celle qui nous intéresse mais ce n'est pas encore cela. Il faut donc pousser un peu plus loin le raisonnement et comprendre que l'adresse _0x08048568_ contient la valeur héxa 03, l'adresse _0x08048569_ contient "00",  _0x0804856a_ contient également "00", pour enfin arriver à l'adresse _0x08048570_ qui contient _55_, soit le caractère "U". Mais il faut bien se souvenir que dans un programme, la fin d'une chaîne est représentée par le caractère fin de chaîne ayant pour valeur "\0" (0x00). Le prochain caractère de ce type est disponible à l'adresse _0x0804858e_. La chaîne qui sera donc affichée grâce à la méthode _puts()_ est en définitif : "Usage : ./challenge01 password". Le traitement du cas où le nombre d'arguments n'est pas correct est maintenant terminé. 
 
-Le traitement du cas où le nombre d'arguments n'est pas correct est maintenant terminé. Dans le cas ou il y a bien 2 arguments, un saut dans le programme est effectué à l'adresse _0x0804849d_. La ligne 18 copie le contenu l'adresse _0x0804858f_ dans _[ebp-0xc]_. Qu'y a-t-il donc à cette adresse ? L'exécution des étapes précédentes permettent de savoir que cette adresse est en fait le début de la chaîne "String_is_too_easy!" :
+Dans le cas ou il y a bien 2 arguments, un saut dans le programme est effectué à l'adresse _0x0804849d_. La ligne 18 copie le contenu l'adresse _0x0804858f_ dans _[ebp-0xc]_. Qu'y a-t-il donc à cette adresse ? L'exécution des étapes précédentes permettent de savoir que cette adresse est en fait le début de la chaîne "String_is_too_easy!" :
 ```
  8048588 7373776f 72640053 7472696e 675f6973  ssword.String_is
  8048598 5f746f6f 5f656173 79210043 6f6e6772  _too_easy!.Congr
