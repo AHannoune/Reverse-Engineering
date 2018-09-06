@@ -41,4 +41,4 @@ L'architecture x64 change la donne en utilisant un autre mécanisme également d
 
 ---
 
-[Page précédente](10.Les-structures.md) | [Sommaire](../../README.md)
+[Page précédente](XX.Alignement-memoire.md) | [Sommaire](../../README.md)
