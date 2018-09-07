@@ -212,4 +212,6 @@ En cas d'égalité des chaînes, le programme affiche la chaîne stockée à l'a
  80485a8 61747a20 21005472 79206167 61696e20  atz !.Try again
 ```
 
+---
+
 | [Retour au challenge](README.md) |
