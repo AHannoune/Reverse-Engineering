@@ -161,4 +161,4 @@ Soit une fonction _main()_ allouant deux variables locales "a" et "b". La ligne 
 
 ---
 
-[Page précédente](10.Les-structures.md) | [Sommaire](../../README.md) | [Page suivante](XX.De_x86a_x64.md)
+[Page précédente](10.Les-structures.md) | [Sommaire](../../README.md) | [Page suivante](XX.De_x86_a_x64.md)
