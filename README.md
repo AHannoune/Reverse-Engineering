@@ -17,6 +17,7 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
   - [Les structures](ressources/architecture-x86-x86_64/10.Les-structures.md)
 - Aller plus loin
   - [Alignement mémoire](ressources/architecture-x86-x86_64/XX.Alignement-memoire.md)
+  - [Executable and Linkable Format](ressources/architecture-x86-x86_64/XX.Executable-and-Linkable-Format.md)
   - [De x86 à x64](ressources/architecture-x86-x86_64/XX.De_x86_a_x64.md)
 
 # Challenges
