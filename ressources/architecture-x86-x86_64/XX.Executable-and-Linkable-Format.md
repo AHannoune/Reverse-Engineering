@@ -184,7 +184,7 @@ Key to Flags:
 Certaines sections sont déjà maintenant bien connues : _.rodata_ qui contient des données constantes et en lecture seule, _.text_ qui contient le code exécutable, _.data_ pour les variables globales et statiques initialisées ou encore _.bss_ pour les variables globales et statiques non initialisées.
 
 ## La table des symboles
-Les symboles sont des données (des indications) qui permettent au développeur de debugger son programme plus facilement. Par exemple, grâce à ces symboles, il sera possible d'indiquer à *gdb* de poser un point d'arrêt (breakpoint), au symbole nommé _main_ pour indiquer la méthode _main()_. Si ces informations ne sont pas présentes, il serait plus difficile (mais pas impossible) d'effectuer une rétro-ingenierie sur un binaire.
+Les symboles sont des données (des indications) qui permettent au développeur de deboguer son programme plus facilement. Par exemple, grâce à ces symboles, il sera possible d'indiquer à *gdb* de poser un point d'arrêt (breakpoint), au symbole nommé _main_ pour indiquer la méthode _main()_. Si ces informations ne sont pas présentes, il serait plus difficile (mais pas impossible) d'effectuer une rétro-ingenierie sur un binaire.
 
 ```
 $ readelf --symbols  ./prog
@@ -275,4 +275,4 @@ Par exemple, l'indication _main_ indique ici qu'il s'agit d'une fonction débuta
 
 ---
 
-[Page précédente](XX.Alignement-memoire.md) | [Sommaire](../../README.md) | [Page suivante](XX.De_x86_a_x64.md)
+[Page précédente](XX.Alignement-memoire.md) | [Sommaire](../../README.md) | [Page suivante](XX.Les-binaires-stripped.md)

@@ -41,4 +41,4 @@ L'architecture x64 change la donne en utilisant un autre mécanisme également d
 
 ---
 
-[Page précédente](XX.Executable-and-Linkable-Format.md) | [Sommaire](../../README.md)
+[Page précédente](XX.Les-binaires-stripped.md) | [Sommaire](../../README.md)
