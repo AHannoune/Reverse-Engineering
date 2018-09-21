@@ -28,6 +28,7 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
   - [Un peu de pratique - Challenge 01](challenges/architecture-x86-x86_64/un_peu_de_pratique-challenge_01/README.md)
   - [Un peu de pratique - Challenge 02](challenges/architecture-x86-x86_64/un_peu_de_pratique-challenge_02/README.md)
   - [Root-me - ELF - 0 protection](challenges/architecture-x86-x86_64/root-me_ELF-0_protection/README.md)
+  - [Root-me - ELF - x86 Basique](challenges/architecture-x86-x86_64/root-me_ELF-x86_basique/README.md)
 - Moyen
   - [Un peu de pratique - Challenge 03](challenges/architecture-x86-x86_64/un_peu_de_pratique-challenge_03/README.md)
 
