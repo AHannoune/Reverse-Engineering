@@ -18,7 +18,7 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
 - Aller plus loin
   - [Alignement mémoire](ressources/architecture-x86-x86_64/XX.Alignement-memoire.md)
   - [Executable and Linkable Format](ressources/architecture-x86-x86_64/XX.Executable-and-Linkable-Format.md)
-  - [Les binaires stripped](ressources/architecture-x86-x86_64/XX.Les-binaires-stripped.md)
+  - [Les binaires "stripped"](ressources/architecture-x86-x86_64/XX.Les-binaires-stripped.md)
   - [De x86 à x64](ressources/architecture-x86-x86_64/XX.De_x86_a_x64.md)
 
 # Challenges
@@ -27,6 +27,7 @@ La rétro-ingénierie, ou ingénierie inverse ou inversée, est l'activité qui 
 - Facile
   - [Un peu de pratique - Challenge 01](challenges/architecture-x86-x86_64/un_peu_de_pratique-challenge_01/README.md)
   - [Un peu de pratique - Challenge 02](challenges/architecture-x86-x86_64/un_peu_de_pratique-challenge_02/README.md)
+  - [Root-me - ELF - 0 protection](challenges/architecture-x86-x86_64/root-me_ELF-0_protection/README.md)
 - Moyen
   - [Un peu de pratique - Challenge 03](challenges/architecture-x86-x86_64/un_peu_de_pratique-challenge_03/README.md)
 

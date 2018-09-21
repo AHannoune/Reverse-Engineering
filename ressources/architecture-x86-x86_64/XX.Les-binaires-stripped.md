@@ -40,7 +40,7 @@ $ ls -sh ./prog
 8,0K ./prog
 ```
 
-Mais pourquoi cela rend il plus difficile la rétro-analyse du binaire ? L'utilisation de _objdump_ donne de la réponse, voici la sortie de l'utilitaire pour la version dite "stripped" :
+Mais pourquoi cela rend il plus difficile la rétro-analyse du binaire ? L'utilisation de _objdump_ donne la réponse. Voici la sortie de l'utilitaire pour la version dite "stripped" :
 ```
 $ objdump -d ./prog -M intel
 ./prog:     format de fichier elf32-i386
@@ -250,7 +250,7 @@ Déassemblage de la section .fini :
  80484b7:       c3                      ret
 ```
 
-Première question, où est la méthode _main()_ ? En effet, plus aucune information de ce type n'est présent. En fait, la méthode _main()_ est présente au sein de la section _.text_, qui contient les instructions à exécuter. Il est quand même possible de retrouver la méthode _main()_ grâce à ces quelques lignes situées au début de la section :
+Première question, où est passé la méthode _main()_ ? En effet, plus aucune information de ce type n'est présent. En fait, la méthode _main()_ est présente au sein de la section _.text_, qui contient les instructions à exécuter. Il est quand même possible de retrouver la méthode _main()_ grâce à ces quelques lignes situées au début de la section :
 ```asm
 8048327:       68 0b 84 04 08          push   0x804840b
 804832c:       e8 bf ff ff ff          call   80482f0 <__libc_start_main@plt>
